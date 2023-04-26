@@ -18,7 +18,7 @@ export const MultipleCustomHooks = () => {
                     : <Quote author={ author } quote={ quote } />
             }
 
-            <button className="btn btn-primary"
+            <button className="btn btn-primary d-block mt-3"
                     disabled={ isLoading }    
                     onClick={ () => increment() }>
                 Next quote

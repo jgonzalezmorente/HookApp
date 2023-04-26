@@ -1,5 +1,6 @@
 import React from 'react';
-import { TodoApp } from './08-useReducer/TodoApp';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// import { TodoApp } from './08-useReducer/TodoApp';
 import ReactDOM from 'react-dom/client';
 
 // import { HooksApp } from './HooksApp';
@@ -15,12 +16,16 @@ import ReactDOM from 'react-dom/client';
 // import { CallbackHook } from './06-memos/CallbackHook';
 // import { Padre } from './07-tarea-memo/Padre';
 // import './08-useReducer/intro-reducer';
+// import { TodoApp } from './08-useReducer/TodoApp';
 
 
 import './index.css';
+import { routesConfig } from './09-useContext/routesConfig';
+
+const router = createBrowserRouter( routesConfig );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>    
-    <TodoApp></TodoApp>    
-  // </React.StrictMode>,
+  // <React.StrictMode>
+    <RouterProvider router={router} />    
+  // </React.StrictMode>,  
 );
